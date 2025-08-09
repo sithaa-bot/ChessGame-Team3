@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ChessController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/Background.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+         <top>
+            
+            <HBox fx:id="opponentBox" alignment="CENTER_LEFT" managed="false" prefHeight="100.0" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Black's Player" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="blackScoreLabel" alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10;" text="Score 0" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="blackTimerLabel" alignment="CENTER" style="-fx-background-color: #333; -fx-background-radius: 10;" text="10:00" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="150.0" right="150.0" top="20.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <HBox alignment="CENTER" pickOnBounds="false">
+               <children>
+                  <GridPane fx:id="chessBoard" gridLinesVisible="true" maxHeight="720" maxWidth="720" minHeight="720" minWidth="720" prefHeight="720" prefWidth="720">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90" minWidth="90" prefWidth="90.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90" minHeight="90" prefHeight="90.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="TOP_LEFT" mouseTransparent="false" pickOnBounds="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="backButton" mnemonicParsing="false" onAction="#GoBackHomePage" prefHeight="37.0" prefWidth="135.0" styleClass="white-shadow-button-black" text="Back" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <StackPane alignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <children>
+                        <VBox fx:id="timeSelectionBox" alignment="CENTER" maxHeight="720.0" minHeight="720.0" prefHeight="720.0" prefWidth="350.0" spacing="30.0" styleClass="time-selection-panel">
+                           <children>
+                              <Label styleClass="time-selection-title" text="Select Time Control" />
+                              <Button mnemonicParsing="false" onAction="#select5Minutes" prefHeight="50.0" prefWidth="250.0" styleClass="time-selection-button" text="5 Minutes" />
+                              <Button mnemonicParsing="false" onAction="#select10Minutes" prefHeight="50.0" prefWidth="250.0" styleClass="time-selection-button" text="10 Minutes" />
+                              <Button mnemonicParsing="false" onAction="#select15Minutes" prefHeight="50.0" prefWidth="250.0" styleClass="time-selection-button" text="15 Minutes" />
+                              <Label fx:id="selectedTimeLabel" managed="false" text="Selected: 10 Minutes" visible="false">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button fx:id="startButton" managed="false" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="50.0" prefWidth="250.0" styleClass="time-selection-button" text="Start Game" visible="false" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="promotionBox" alignment="CENTER" maxHeight="720.0" minHeight="720.0" prefHeight="720.0" prefWidth="350.0" spacing="20.0" styleClass="time-selection-panel" visible="false" managed="false">
+                           <children>
+                              <Label styleClass="time-selection-title" text="Promote Pawn" />
+                              <HBox alignment="CENTER" spacing="10">
+                                 <ImageView fx:id="queenPromotion" fitHeight="80" fitWidth="80" onMouseClicked="#promoteToQueen" style="-fx-cursor: hand;"/>
+                                 <ImageView fx:id="rookPromotion" fitHeight="80" fitWidth="80" onMouseClicked="#promoteToRook" style="-fx-cursor: hand;"/>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="10">
+                                 <ImageView fx:id="bishopPromotion" fitHeight="80" fitWidth="80" onMouseClicked="#promoteToBishop" style="-fx-cursor: hand;"/>
+                                 <ImageView fx:id="knightPromotion" fitHeight="80" fitWidth="80" onMouseClicked="#promoteToKnight" style="-fx-cursor: hand;"/>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <HBox fx:id="playerBox" alignment="CENTER_LEFT" managed="false" prefHeight="100.0" visible="false" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="White's Player" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="whiteScoreLabel" alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10;" text="Score 0" textFill="BLACK">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="whiteTimerLabel" alignment="CENTER" style="-fx-background-color: #333; -fx-background-radius: 10;" text="10:00" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="150.0" right="150.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+      <Label fx:id="turnLabel" managed="false" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: rgba(0,0,0,0.5); -fx-padding: 10px; -fx-background-radius: 10px;" text="White's Turn" visible="false" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets top="10.0" />
+         </StackPane.margin>
+      </Label>
+   </children>
+</StackPane>

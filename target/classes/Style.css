@@ -1,0 +1,190 @@
+.left-half {
+    -fx-background-color: black;
+}
+
+.right-half {
+    -fx-background-color: white;
+}
+
+/* GameStyle.css */
+
+.white-font {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial"; /* Or use a pixel/game font */
+}
+.white-font-Rule-header {
+    -fx-text-fill: white;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman"; /* Or use a pixel/game font */
+}
+.white-font-Rule {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman"; /* Or use a pixel/game font */
+}
+
+
+.black-font {
+    -fx-text-fill: black;
+    -fx-font-size: 65px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}
+
+/* Alternative with green hover text */
+.white-shadow-button-gray {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: #cccccc;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);
+}
+
+.white-shadow-button-gray:hover {
+    -fx-text-fill: #888888; /* Gray text on hover */
+}
+
+.clean-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: 600; /* Use numeric weight for semi-bold */
+    -fx-font-family: "Segoe UI", "Sans-serif";
+    -fx-text-fill: #333333;  /* soft black */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 2, 0, 0, 1);
+}
+
+/* Gaming quote label with bold font */
+.game-quote-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Orbitron", "Exo 2", "Rajdhani", "Arial Black", "Impact", "Sans-serif";
+    -fx-text-fill: #333333;  /* soft black */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 2, 0, 0, 1);
+}
+.game-quote-label-Rule {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: #333333;  /* soft black */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 2, 0, 0, 1);
+}
+
+.game-quote-label-white {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Orbitron", "Exo 2", "Rajdhani", "Arial Black", "Impact", "Sans-serif";
+    -fx-text-fill: #ffffff;  /* white */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 2, 0, 0, 1);
+}
+
+/* Epic/Fantasy gaming style */
+.epic-quote-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Cinzel", "Trajan Pro", "Times New Roman", "Serif";
+    -fx-text-fill: #8b4513;  /* bronze/gold color */
+    -fx-effect: dropshadow(gaussian, rgba(139,69,19,0.4), 4, 0, 0, 2);
+}
+
+.timesNewRoman {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;  /* soft black for readability */
+}
+
+.modern-card {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 16px;
+    -fx-effect: 
+        dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0.8, 0, 2),
+        dropshadow(gaussian, rgba(0,0,0,0.06), 40, 1.0, 0, 4);
+}
+
+.white-shadow-button-black {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-color: #cccccc;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 8, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+/* Hover style */
+.white-shadow-button-black:hover {
+    -fx-background-color: #888888; /* Slightly lighter than black */
+    -fx-text-fill: white;
+    -fx-border-color: #ffffff; /* Brighter border */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.4), 12, 0.2, 0, 4);
+}
+
+.timesNewRomanAbu {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 30px;
+    -fx-text-fill: #333333;  /* soft black for readability */
+}
+.time-selection-panel {
+    -fx-background-color: rgba(20, 20, 20, 0.88); /* Dark, semi-transparent background */
+    -fx-background-radius: 15px;
+    -fx-border-color: rgba(255, 255, 255, 0.5); /* Subtle white border */
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 25, 0, 0, 0);
+    -fx-padding: 30px;
+}
+
+/* General style for labels inside the panel */
+.time-selection-panel .label {
+    -fx-text-fill: #e0e0e0; /* Off-white text for better readability */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Style for the main title label */
+.time-selection-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Style for the buttons inside the panel */
+.time-selection-button {
+    -fx-background-color: #444444;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Semibold", sans-serif;
+    -fx-font-size: 18px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #777777;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);
+}
+
+/* Hover effect for the buttons */
+.time-selection-button:hover {
+    -fx-background-color: #666666; /* Lighter gray on hover */
+    -fx-border-color: #bbbbbb;
+}
+
+/* Style for the 'Start Game' button to make it stand out */
+#startButton {
+    -fx-background-color: #28a745; /* Green color for start */
+    -fx-border-color: #248f3c;
+}
+
+#startButton:hover {
+    -fx-background-color: #32c453;
+    -fx-border-color: white;
+}
+
+

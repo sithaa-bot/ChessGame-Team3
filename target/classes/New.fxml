@@ -1,0 +1,194 @@
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <?import javafx.geometry.Insets?>
+    <?import javafx.scene.control.Button?>
+    <?import javafx.scene.control.Hyperlink?>
+    <?import javafx.scene.control.Label?>
+    <?import javafx.scene.image.Image?>
+    <?import javafx.scene.image.ImageView?>
+    <?import javafx.scene.layout.AnchorPane?>
+    <?import javafx.scene.layout.HBox?>
+    <?import javafx.scene.layout.VBox?>
+    <?import javafx.scene.layout.StackPane?>
+    <?import javafx.scene.shape.Rectangle?>
+    <?import javafx.scene.text.Font?>
+
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="gradient-background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.AboutUsPageController">
+    <children>
+        <!-- Background Decorative Elements -->
+        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#1a1a2e" height="200.0" opacity="0.1" rotate="15.0" width="200.0" x="100.0" y="300.0" />
+        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffd700" height="150.0" opacity="0.08" rotate="-20.0" width="150.0" x="1600.0" y="400.0" />
+        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ff6b6b" height="180.0" opacity="0.06" rotate="30.0" width="180.0" x="200.0" y="800.0" />
+        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#4ecdc4" height="120.0" opacity="0.08" rotate="-45.0" width="120.0" x="1700.0" y="200.0" />
+        
+        <!-- Enhanced Back Button -->
+        <Button fx:id="backButton" alignment="CENTER" layoutX="54.0" layoutY="49.0" mnemonicParsing="false" onAction="#gobackhomepage" prefHeight="65.0" prefWidth="180.0" styleClass="modern-back-button" text="← Back">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Button>
+        
+        <!-- Enhanced Title -->
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" layoutY="120.0" prefHeight="120.0" prefWidth="1935.0" styleClass="main-title" text="Meet The Chess Masters">
+            <font>
+                <Font name="System Bold" size="48.0" />
+            </font>
+        </Label>
+        
+        <!-- Subtitle -->
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" layoutY="210.0" prefHeight="40.0" prefWidth="1935.0" styleClass="subtitle-text" text="Passionate Developers | Strategic Minds | Future Innovators">
+            <font>
+                <Font name="System" size="18.0" />
+            </font>
+        </Label>
+        
+        <!-- Enhanced Team Section -->
+        <HBox layoutX="200.0" layoutY="280.0" prefHeight="500.0" prefWidth="1520.0" spacing="120.0">
+            <children>
+                <!-- First Team Member -->
+                <VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0" spacing="20.0" styleClass="team-member-card">
+                <children>
+                    <StackPane prefHeight="300.0" prefWidth="300.0">
+                        <children>
+                            <!-- Photo Background Effect -->
+                            <Rectangle arcHeight="200.0" arcWidth="200.0" fill="#ffd700" height="280.0" opacity="0.3" rotate="5.0" width="280.0" />
+                            <Rectangle arcHeight="200.0" arcWidth="200.0" fill="#ff6b6b" height="270.0" opacity="0.2" rotate="-3.0" width="270.0" />
+                            
+                            <!-- Photo Frame -->
+                            <ImageView fitHeight="250.0" fitWidth="250.0" styleClass="profile-image">
+                            <image>
+                                <Image url="@img/nyheng.jpg" />
+                            </image>
+                            </ImageView>
+                            
+                            <!-- Chess Piece Decorations -->
+                            <Label layoutX="-80.0" layoutY="-80.0" styleClass="chess-decoration" text="♔">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            </Label>
+                            <Label layoutX="80.0" layoutY="80.0" styleClass="chess-decoration" text="♕">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            </Label>
+                        </children>
+                    </StackPane>
+                    
+                    <Label styleClass="member-name" text="Chin Hong Nyheng">
+                        <font>
+                            <Font name="System Bold" size="24.0" />
+                        </font>
+                    </Label>
+                    
+                    <Label styleClass="member-role" text="Frontend Developer &amp; Game Designer">
+                        <font>
+                            <Font name="System" size="16.0" />
+                        </font>
+                    </Label>
+                    
+                    <HBox alignment="CENTER" spacing="10.0">
+                        <children>
+                            <Label styleClass="skill-tag" text="Programming" />
+                            <Label styleClass="skill-tag" text="Design" />
+                            <Label styleClass="skill-tag" text="Animation" />
+                        </children>
+                    </HBox>
+                </children>
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+                </VBox>
+                
+                <!-- Second Team Member -->
+                <VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0" spacing="20.0" styleClass="team-member-card">
+                <children>
+                    <StackPane prefHeight="300.0" prefWidth="300.0">
+                        <children>
+                            <!-- Photo Background Effect -->
+                            <Rectangle arcHeight="200.0" arcWidth="200.0" fill="#4ecdc4" height="280.0" opacity="0.3" rotate="-5.0" width="280.0" />
+                            <Rectangle arcHeight="200.0" arcWidth="200.0" fill="#45b7d1" height="270.0" opacity="0.2" rotate="3.0" width="270.0" />
+                            
+                            <!-- Photo Frame -->
+                            <ImageView fitHeight="250.0" fitWidth="250.0" styleClass="profile-image">
+                            <image>
+                                <Image url="@img/sitha.jpg" />
+                            </image>
+                            </ImageView>
+                            
+                            <!-- Chess Piece Decorations -->
+                            <Label layoutX="-80.0" layoutY="-80.0" styleClass="chess-decoration" text="♖">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            </Label>
+                            <Label layoutX="80.0" layoutY="80.0" styleClass="chess-decoration" text="♗">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            </Label>
+                        </children>
+                    </StackPane>
+                    
+                    <Label styleClass="member-name" text="Huoth Sitha">
+                        <font>
+                            <Font name="System Bold" size="24.0" />
+                        </font>
+                    </Label>
+                    
+                    <Label styleClass="member-role" text="Lead Developer &amp; Strategy Designer">
+                        <font>
+                            <Font name="System" size="16.0" />
+                        </font>
+                    </Label>
+                    
+                    <HBox alignment="CENTER" spacing="10.0">
+                        <children>
+                            <Label styleClass="skill-tag" text="Game Logic" />
+                            <Label styleClass="skill-tag" text="UI/UX" />
+                            <Label styleClass="skill-tag" text="Strategy" />
+                        </children>
+                    </HBox>
+                </children>
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+                </VBox>
+            </children>
+        </HBox>
+        
+        <!-- Enhanced Description Section -->
+        <VBox layoutX="200.0" layoutY="800.0" prefHeight="220.0" prefWidth="1520.0" spacing="20.0" styleClass="description-card">
+            <children>
+                <Label lineSpacing="8.0" prefHeight="140.0" prefWidth="1480.0" styleClass="description-text" text="We are passionate second-year students at the Institute of Technology of Cambodia, united by our love for chess and technology. Our mission is to bridge the gap between classic strategy games and modern digital experiences." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font name="System" size="20.0" />
+                </font>
+                </Label>
+                
+                <Label lineSpacing="8.0" prefHeight="140.0" prefWidth="1480.0" styleClass="description-text" text="Together, we're crafting an innovative chess game that combines timeless strategic gameplay with cutting-edge design and intuitive user experience. This project represents our journey in mastering programming, game development, and user interface design." textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font name="System" size="20.0" />
+                </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+        
+        <!-- Enhanced Portfolio Link -->
+        <Hyperlink fx:id="mylink" alignment="CENTER" layoutX="810.0" layoutY="1020.0" onAction="#goYT" prefHeight="50.0" prefWidth="300.0" styleClass="portfolio-link" text="🎯 View Portfolio (Huoth Sitha)">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Hyperlink>
+        
+        <!-- Inspirational Quote -->
+        <Label alignment="CENTER" layoutX="200.0" layoutY="750.0" prefHeight="30.0" prefWidth="1520.0" styleClass="quote-text" text="&quot;Every master was once a beginner. Every pro was once an amateur. Every icon was once an unknown.&quot;">
+            <font>
+                <Font name="System Italic" size="16.0" />
+            </font>
+        </Label>
+    </children>
+    </AnchorPane>
